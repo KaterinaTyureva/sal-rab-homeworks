@@ -45,12 +45,12 @@ function sendRequest(name, phone, address, goods, sum) {
         data.address.push(address[i].street, address[i].house, address[i].entrance, address[i].floor, address[i].flat );
         //data.goods.push{title: [], count: {}};
     }
-    data.client =name, ' ', phone;
+    data.client =name, phone;
     data.order = data.address + data.sum;
     //data.order.sum = data.client
 
    // data.client = 'Иван';
     let jsonData = JSON.stringify({data});
-    
+
     return jsonData;
 }
